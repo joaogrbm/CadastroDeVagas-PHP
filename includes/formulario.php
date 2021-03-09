@@ -1,12 +1,8 @@
-<main>
+<main class="text-dark">
 
-  <section>
-    <a href="index.php">
-      <button class="btn btn-success">Voltar</button>
-    </a>
-  </section>
 
-  <h2 class="mt-3"><?=TITLE?></h2>
+
+  <h2 class="mt-3 "><?=TITLE?></h2>
 
   <form method="post">
 
@@ -19,6 +15,38 @@
       <label>Descrição</label>
       <textarea class="form-control" name="descricao" rows="5"><?=$obVaga->descricao?></textarea>
     </div>
+
+    <div class="form-group">
+      <label>Experiência</label>
+
+      <div>
+          <div class="form-check form-check-inline">
+            <label class="form-control">
+              <input type="radio" name="experiencia" value="Estagiario" checked> Estágiario
+            </label>
+          </div>
+
+          <div class="form-check form-check-inline">
+            <label class="form-control">
+              <input type="radio" name="experiencia" value="Junior" <?=$obVaga->experiencia>'Junior' ? 'checked' : ''?>> Júnior
+            </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <label class="form-control">
+              <input type="radio" name="experiencia" value="Pleno" <?=$obVaga->experiencia>'Pleno' ? 'checked' : ''?>> Pleno
+            </label>
+          </div>
+
+          <div class="form-check form-check-inline">
+            <label class="form-control">
+              <input type="radio" name="experiencia" value="Senior" <?=$obVaga->experiencia>'Senior' ? 'checked' : ''?>>Sênior
+            </label>
+          </div>
+
+      </div>
+
+    </div>
+
 
     <div class="form-group">
       <label>Status</label>
@@ -40,9 +68,15 @@
     </div>
 
     <div class="form-group">
-      <button type="submit" class="btn btn-success">Enviar</button>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+        <a href="index.php">
+        <button class="btn btn-danger">Voltar</button>
+        </a>
     </div>
 
+
+  
   </form>
+
 
 </main>

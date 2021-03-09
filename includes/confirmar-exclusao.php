@@ -1,4 +1,4 @@
-<main>
+<main class="text-dark">
 
   <h2 class="mt-3">Excluir vaga</h2>
 

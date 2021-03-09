@@ -8,10 +8,11 @@ use \App\Entity\Vaga;
 $obVaga = new Vaga;
 
 //VALIDA O POST
-if(isset($_POST['titulo'],$_POST['descricao'],$_POST['ativo'])){
+if(isset($_POST['titulo'],$_POST['descricao'],$_POST['experiencia'],$_POST['ativo'])){
 
   $obVaga->titulo    = $_POST['titulo'];
   $obVaga->descricao = $_POST['descricao'];
+  $obVaga->experiencia = $_POST['experiencia'];
   $obVaga->ativo     = $_POST['ativo'];
   $obVaga->cadastrar();
 

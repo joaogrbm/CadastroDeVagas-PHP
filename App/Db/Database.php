@@ -11,25 +11,25 @@ class Database{
    * Host de conexão com o banco de dados
    * @var string
    */
-  const HOST = 'host';
+  const HOST = 'localhost';
 
   /**
    * Nome do banco de dados
    * @var string
    */
-  const NAME = 'banco';
+  const NAME = 'wdev_vagas';
 
   /**
    * Usuário do banco
    * @var string
    */
-  const USER = 'usario';
+  const USER = 'root';
 
   /**
    * Senha de acesso ao banco de dados
    * @var string
    */
-  const PASS = 'senha';
+  const PASS = '';
 
   /**
    * Nome da tabela a ser manipulada

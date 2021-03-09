@@ -31,6 +31,8 @@ class Vaga{
    */
   public $ativo;
 
+  public $experiencia;
+
   /**
    * Data de publicação da vaga
    * @var string
@@ -50,6 +52,7 @@ class Vaga{
     $this->id = $obDatabase->insert([
                                       'titulo'    => $this->titulo,
                                       'descricao' => $this->descricao,
+                                      'experiencia' => $this->experiencia,
                                       'ativo'     => $this->ativo,
                                       'data'      => $this->data
                                     ]);
@@ -66,6 +69,7 @@ class Vaga{
     return (new Database('vagas'))->update('id = '.$this->id,[
                                                                 'titulo'    => $this->titulo,
                                                                 'descricao' => $this->descricao,
+                                                                'experiencia' => $this->experiencia,
                                                                 'ativo'     => $this->ativo,
                                                                 'data'      => $this->data
                                                               ]);

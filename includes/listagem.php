@@ -1,3 +1,4 @@
+
 <?php
 
   $mensagem = '';
@@ -16,11 +17,11 @@
   $resultados = '';
   foreach($vagas as $vaga){
     $resultados .= '<tr>
-                      <td>'.$vaga->id.'</td>
+                      <th scope="row">'.$vaga->id.'</td>
                       <td>'.$vaga->titulo.'</td>
                       <td>'.$vaga->descricao.'</td>
+                      <td>'.$vaga->experiencia.'</td>
                       <td>'.($vaga->ativo == 's' ? 'Ativo' : 'Inativo').'</td>
-                      <td>'.date('d/m/Y à\s H:i:s',strtotime($vaga->data)).'</td>
                       <td>
                         <a href="editar.php?id='.$vaga->id.'">
                           <button type="button" class="btn btn-primary">Editar</button>
@@ -44,28 +45,25 @@
   <?=$mensagem?>
 
   <section>
-    <a href="cadastrar.php">
-      <button class="btn btn-success">Nova vaga</button>
-    </a>
-  </section>
-
-  <section>
-
-    <table class="table bg-light mt-3">
+    <div class="table-responsive">
+    <table class="table bg-light mt-3 shadow">
         <thead>
           <tr>
-            <th>ID</th>
-            <th>Título</th>
-            <th>Descrição</th>
-            <th>Status</th>
-            <th>Data</th>
-            <th>Ações</th>
+            <th scope="col">ID</th>
+            <th scope="col">Título</th>
+            <th scope="col">Descrição</th>
+            <th scope="col">Experiência</th>
+            <th scope="col">Status</th>
+            <th scope="col" >Ações</th>
           </tr>
         </thead>
         <tbody>
             <?=$resultados?>
         </tbody>
     </table>
+    </div>
+    
+
 
   </section>
 
